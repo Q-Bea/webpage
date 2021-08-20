@@ -1,0 +1,8 @@
+{
+    "terminal.integrated.shellArgs.linux": [
+        "-i"
+    ],
+    "cSpell.words": [
+        "descript"
+    ]
+}

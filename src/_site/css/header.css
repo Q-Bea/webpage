@@ -1,0 +1,19 @@
+#header {
+    width: auto;
+    text-align: center;
+    margin: auto;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5%;
+}
+
+#word-descript {
+    font-size: large;
+}
+
+.pageSpacer {
+    display: block;
+    width: 100%;
+    min-height: 3%;
+    height: 3%;
+}
