@@ -2,8 +2,7 @@
     border-width: 1px;
     border-style: solid;
     display: block;
-    height: 50%;
-    min-height: 300px;
+    height: 600px;
     overflow: hidden
 }
 
@@ -12,14 +11,14 @@
     border-style: solid;
     display: block;
     float: left;
-    height: 100%;
+    height: max-content;
     width: 70%;
 }
 
 #midSpacer {
     display: block;
     float: none;
-    height: 100%;
+    height: max-content;
     border-width: 1px;
     border-style: solid;
     display: block;
@@ -41,6 +40,7 @@
     float: none;
     overflow: hidden;
     height: 100%;
+    position: relative;
 }
 
 #projectAnimation {
@@ -49,7 +49,7 @@
     display: block;
     border-width: 1px;
     border-style: solid;
-    height: 100%;
+    height: max-content;
 }
 
 #projectDescription {
@@ -58,11 +58,45 @@
     display: block;
     border-width: 1px;
     border-style: solid;
-    height: 100%;
+    height: max-content;
+    position: relative;
 }
 
-@media only screen and (max-width: 768) {
-    
+#projectCycler {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+}
+
+#prevProject,
+#nextProject {
+    display: inline-block;
+    width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+    #projectsCard {
+        width: 100%;
+        max-height: 400px;
+    }
+
+    #contactDescriptCard {
+        width: 100%;
+        max-height: 400px;
+    }
+
+    #pageMid {
+        height: max-content;
+    }
+
+    #midSpacer {
+        display: none;
+    }
+
+    #contactContent {
+        width: 100%
+    }
 }
 
 .cardInfo {
