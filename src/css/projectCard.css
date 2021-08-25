@@ -52,6 +52,7 @@
     flex-grow: 1;
     border-radius: 0;
     transition: 0.3s;
+    font-size: larger;
 }
 
 #prevProject:hover,
