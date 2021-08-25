@@ -1,41 +1,43 @@
+---
+---
 <head>
-    <title>Ben MacDonald</title>
+    <title>{{site.data.author.name}}</title>
 
-    <link rel="stylesheet" href="css/header.css"></link>
-    <link rel="stylesheet" href="css/pageMid.css"></link>
-    <link rel="stylesheet" href="css/footer.css"></link>
-
+    <link rel="stylesheet" href="css/loader.css"></link>
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"></link>
 </head>
 <body>
     <div id="header">
-        <h1 id="name">Ben MacDonald</h1>
+        <span id="name">{{site.data.author.name}}</span> <span class="pronouns">{{site.data.author.pronouns}}</span>
         <p id="word-descript">Fill. in. the. blank.</p>
     </div>
     <div class="pageSpacer"></div>
     <div id="pageMid">
         <div id="contactDescriptCard">
-            <h2 class="cardInfo">Info</h2>
+            <h2 class="cardInfo">Who am I</h2>
             <div id="contactContent">
-                <h3>Contact info and stuff goes here</h3>
+                {% include contact.html %}
             </div>
-            <div id="midSpacer"></div>
         </div>
+        <div id="midSpacer"></div>
         <div id="projectsCard">
-            <h2 class="cardInfo">Project Picks</h2>
-            <div id="projectAnimation">
-                Project animation goes here
+            <div id="projectPicksHeader">
+                <button id="prevProject">Previous</button>
+                <h2 class="cardInfo">Project Picks</h2>
+                <button id="nextProject">Next</button>
             </div>
-            <div id="projectDescription">
-                Projects description goes here
-                <div id="projectCycler">
-                    <button id="prevProject">Previous</button>
-                    <button id="nextProject">Next</button>
+            <div id="projectDetailsWrapper">
+                <div id="projectAnimation">
+                    {% include speed.html %}
+                </div>
+                <div id="projectDescription">
+                    Projects description goes here
                 </div>
             </div>
         </div>
     </div>
     <div class="pageSpacer"></div>
     <div id="footer">
-        <h5>Footer goes here</h5>
+        {% include footer.html %}
     </div>
 </body>

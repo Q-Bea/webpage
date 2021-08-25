@@ -7,6 +7,20 @@
     padding: 5%;
 }
 
+#name {
+    display: inline-flex;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.pronouns {
+    display: inline-flex;
+    font-size: x-small;
+    color: rgba(0,0,0,0.68);
+    background-color: rgb(233, 233, 233);
+    vertical-align: text-bottom;
+}
+
 #word-descript {
     font-size: large;
 }

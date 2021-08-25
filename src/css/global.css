@@ -1,0 +1,8 @@
+html,
+body {
+    min-height: 100vh;
+}
+
+.nice-font {
+    font-family: "Roboto", "sans-serif";
+}
