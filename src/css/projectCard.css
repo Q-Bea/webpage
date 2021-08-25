@@ -1,0 +1,79 @@
+#projectsCard {
+    display: flex;
+    border-width: 1px;
+    border-style: solid;
+    float: none;
+    overflow: hidden;
+    height: 100%;
+    flex-flow: column;
+    flex-grow: 1;
+}
+
+#projectDetailsWrapper {
+    display: flex;
+    flex-grow: 1;
+    margin: 10px;
+}
+
+#projectAnimation {
+    width: 25%;
+    float: left;
+    display: flex;
+    border-width: 1px;
+    border-style: solid;
+    height: 100%;
+}
+
+#projectText {
+    float: none;
+    display: flex;
+    border-width: 1px;
+    border-style: solid;
+    position: relative;
+    height: 100%;
+    width: 75%;
+    margin-left: 10px;
+    flex-flow: column;
+}
+
+#projectCycler {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    /* bottom: 0px; */
+    /* height: 30px; */
+}
+
+#prevProject,
+#nextProject {
+    display: inline-block;
+    flex-grow: 1;
+    border-radius: 0;
+    transition: 0.3s;
+}
+
+#prevProject:hover,
+#nextProject:hover {
+    background-color: rgb(192, 192, 192);
+}
+
+#projectPicksHeader {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+#projectPicksHeader .cardInfo {
+    width: 60%;
+}
+
+#projectTitle {
+    display: block;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#projectDescription {
+    font-size: large;
+}

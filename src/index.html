@@ -3,8 +3,10 @@
 <head>
     <title>{{site.data.author.name}}</title>
 
-    <link rel="stylesheet" href="css/loader.css"></link>
-    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"></link>
+    <link rel="stylesheet" href="css/loader.css"/>
+    
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
 </head>
 <body>
     <div id="header">
@@ -28,11 +30,18 @@
             </div>
             <div id="projectDetailsWrapper">
                 <div id="projectAnimation">
-                    {% include speed.html %}
+                    {% include projects/{{site.data.projects.speed.subfolder}}/animation.html %}
                 </div>
-                <div id="projectDescription">
-                    Projects description goes here
+                <div id="projectText">
+                    <div id="projectTitle">
+                        {{site.data.projects.speed.title}}
+                    </div>
+                    <hr>
+                    <div id="projectDescription">
+                        {% include projects/{{site.data.projects.speed.subfolder}}/description.html %}
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>

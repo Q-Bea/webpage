@@ -1,4 +1,5 @@
-@import "contactBody.css";
+@import "contactCard.css";
+@import "projectCard.css";
 
 #pageMid {
     border-width: 1px;
@@ -11,90 +12,12 @@
 }
 
 #midSpacer {
-    width: 15%;
+    min-width: 15%;
     display: flex;
 }
 
 .cardInfo {
     height: fit-content;
-}
-
-#contactContent {
-    border-width: 1px;
-    border-style: solid;
-    display: block;
-    float: left;
-    height: max-content;
-    flex-grow: 1;
-}
-
-#contactDescriptCard {
-    display: flex;
-    flex-flow: column;
-    border-width: 1px;
-    border-style: solid;
-    width: 30%;
-    float: left;
-    height: 100%;
-}
-
-#projectsCard {
-    display: flex;
-    border-width: 1px;
-    border-style: solid;
-    float: none;
-    overflow: hidden;
-    height: 100%;
-    flex-flow: column;
-    flex-grow: 1;
-}
-
-#projectDetailsWrapper {
-    display: flex;
-    flex-grow: 1;
-}
-
-#projectAnimation {
-    width: 25%;
-    float: left;
-    display: flex;
-    border-width: 1px;
-    border-style: solid;
-    height: 100%;
-}
-
-#projectDescription {
-    float: none;
-    display: block;
-    border-width: 1px;
-    border-style: solid;
-    position: relative;
-    height: 100%;
-    width: 75%;
-}
-
-#projectCycler {
-    width: 100%;
-    display: flex;
-    position: absolute;
-    /* bottom: 0px; */
-    /* height: 30px; */
-}
-
-#prevProject,
-#nextProject {
-    display: inline-block;
-    flex-grow: 1;
-}
-
-#projectPicksHeader {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-}
-
-#projectPicksHeader .cardInfo {
-    width: 60%;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -120,8 +43,9 @@
         display: none;
     }
 
-    #projectDescription {
+    #projectText {
         width: 100%;
+        margin-left: 0px;
     }
 }
 
