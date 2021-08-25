@@ -1,6 +1,7 @@
 <object id="test" data="images/svg/Wall Slice.svg" type="image/svg+xml"></object>
 <script>
-    window.addEventListener("load", () => {
+    document.getElementById("test").addEventListener("load", () => {
+        const targetDegree = -720
         const element = document.getElementById("test")
 
         const svg = element.contentDocument.documentElement;
@@ -20,11 +21,13 @@
             elements.forEach((element, index) => {
                 const color = Math.abs(255 * Math.sin((currentDegree + Math.round(360/elements.size)*index)%360 * ((2*Math.PI)/360)/3));
 
-                element.style = `fill:RGB(${color}, ${color}, ${color})`
+                element.style = "fill:RGB(" + color + "," + color + "," + color + ")";
             })
 
-            if (currentDegree > -720) { 
-                currentDegree -= 5 //TODO, exponential time decrease based on remaining distance to target value. Also, better math in general
+            if (currentDegree > targetDegree) { 
+                const percentComplete = currentDegree / targetDegree
+
+                currentDegree -= (1/percentComplete)*2.5 //TODO, exponential time decrease based on remaining distance to target value. Also, better math in general
                 window.requestAnimationFrame(draw)
             }
         }
@@ -32,4 +35,6 @@
         window.requestAnimationFrame(draw)
         let currentDegree = -320;
     })
+
+    console.log("hi!")
 </script>

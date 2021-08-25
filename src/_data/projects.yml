@@ -1,3 +1,7 @@
 speed:
   subfolder: speed
   title: Speed Tracker
+
+light-node:
+  subfolder: light-node
+  title: Light Node
