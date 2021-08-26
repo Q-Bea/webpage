@@ -1,9 +1,23 @@
 ---
 ---
+
+const projectRendered = []
+{% for project in site.data.projects.entries %}
+    projectRendered.push({
+        title: `{{project.title }}`,
+        animation: `{% include projects/{{project.subfolder}}/animation.html %}`,
+        description: `{% include projects/{{project.subfolder}}/description.html %}`
+    })
+{% endfor %}
+
+let currentProject = 0;
+
 window.addEventListener("load", function () {
     document.getElementById("prevProject").onclick = onPrev
 
     document.getElementById("nextProject").onclick = onNext
+
+    document.getElementById("prevProject").click()
 })
 
 var setInnerHTML = function(elm, html) {
@@ -18,15 +32,34 @@ var setInnerHTML = function(elm, html) {
 }
 
 function onNext() {
-    document.getElementById("projectDescription").innerHTML = '{% include projects/{{site.data.projects.light-node.subfolder}}/description.html %}'
-    document.getElementById("projectTitle").innerHTML = '{{site.data.projects.light-node.title}}'
+    currentProject++;
 
-    setInnerHTML(document.getElementById("projectAnimation"), `{% include projects/{{site.data.projects.light-node.subfolder}}/animation.html %}`)
+    if (projectRendered[currentProject] === undefined) {
+        currentProject = 0;
+    }
+
+    sharedCycle()
 }
 
 function onPrev() {
-    document.getElementById("projectDescription").innerHTML = '{% include projects/{{site.data.projects.speed.subfolder}}/description.html %}';
-    document.getElementById("projectTitle").innerHTML = '{{site.data.projects.speed.title}}';
+    currentProject--;
 
-    setInnerHTML(document.getElementById("projectAnimation"), `{% include projects/{{site.data.projects.speed.subfolder}}/animation.html %}`)
+    if (currentProject < 0) {
+        currentProject = projectRendered.length - 1;
+    }
+
+    sharedCycle()
+}
+
+function sharedCycle() {
+    document.getElementById("projectDescription").innerHTML = projectRendered[currentProject].description;
+    document.getElementById("projectTitle").innerHTML = projectRendered[currentProject].title;
+
+    setInnerHTML(document.getElementById("projectAnimation"), projectRendered[currentProject].animation)
+
+    if (document.getElementById("projectAnimation").innerHTML === "") {
+        document.getElementById("projectAnimation").classList.add("hidden")
+    } else {
+        document.getElementById("projectAnimation").classList.remove("hidden")
+    }
 }

@@ -95,3 +95,7 @@ body {
     display: flex;
     flex-grow: 1;
 }
+
+.hidden {
+    display: none !important;
+}

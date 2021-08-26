@@ -23,6 +23,7 @@
     border-style: solid;
     height: 100%;
     max-width: fit-content;
+    margin-right: 10px;
 }
 
 #projectText {
@@ -33,7 +34,6 @@
     position: relative;
     height: 100%;
     width: 75%;
-    margin-left: 10px;
     flex-flow: column;
     flex-grow: 1;
 }

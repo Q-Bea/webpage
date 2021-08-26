@@ -1,7 +1,9 @@
-speed:
-  subfolder: speed
+entries:
+- subfolder: speed
   title: Speed Tracker
 
-light-node:
-  subfolder: light-node
+- subfolder: light-node
   title: Light Node
+
+- subfolder: example3
+  title: Project Example 3
