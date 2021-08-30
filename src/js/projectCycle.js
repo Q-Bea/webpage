@@ -14,10 +14,10 @@ let currentProject = 0;
 
 window.addEventListener("load", function () {
     document.getElementById("prevProject").onclick = onPrev
+    document.getElementById("prevProject").innerHTML = "Previous"
 
     document.getElementById("nextProject").onclick = onNext
-
-    document.getElementById("prevProject").click()
+    document.getElementById("nextProject").innerHTML = "Next"
 })
 
 var setInnerHTML = function(elm, html) {
@@ -52,14 +52,53 @@ function onPrev() {
 }
 
 function sharedCycle() {
-    document.getElementById("projectDescription").innerHTML = projectRendered[currentProject].description;
-    document.getElementById("projectTitle").innerHTML = projectRendered[currentProject].title;
+    fade(function () {
+        document.getElementById("projectDescription").innerHTML = projectRendered[currentProject].description;
+        document.getElementById("projectTitle").innerHTML = projectRendered[currentProject].title;
+    
+        setInnerHTML(document.getElementById("projectAnimation"), projectRendered[currentProject].animation)
+    
+        if (document.getElementById("projectAnimation").innerHTML === "") {
+            document.getElementById("projectAnimation").classList.add("hidden")
+        } else {
+            document.getElementById("projectAnimation").classList.remove("hidden")
+        }
+    
+        unfade(null, document.getElementById("projectDescription"), document.getElementById("projectTitle"), document.getElementById("projectAnimation"))
+    }, document.getElementById("projectDescription"), document.getElementById("projectTitle"), document.getElementById("projectAnimation"))
+}
 
-    setInnerHTML(document.getElementById("projectAnimation"), projectRendered[currentProject].animation)
+function fade(done, ...elements) {
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        for (element of elements) {
+            element.style.opacity = op;
+            element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        }
 
-    if (document.getElementById("projectAnimation").innerHTML === "") {
-        document.getElementById("projectAnimation").classList.add("hidden")
-    } else {
-        document.getElementById("projectAnimation").classList.remove("hidden")
-    }
+        if (op <= 0.1){
+            clearInterval(timer);
+            // element.style.display = 'none';
+            done()
+        }
+
+        op -= op * 0.1;
+    }, 1);
+}
+
+function unfade(done, ...elements) {
+    var op = 0.1;  // initial opacity
+    // element.style.display = 'block';
+    var timer = setInterval(function () {
+        for (element of elements) {
+            element.style.opacity = op;
+            element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        }
+
+        if (op >= 1){
+            clearInterval(timer);
+        }
+
+        op += op * 0.1;
+    }, 1);
 }
