@@ -2,11 +2,8 @@
 @import "projectCard.css";
 
 #pageMid {
-    border-width: 1px;
-    border-style: solid;
     display: flex;
     height: 700px;
-    overflow: hidden;
     flex-flow: row;
 
 }

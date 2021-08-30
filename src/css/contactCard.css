@@ -33,8 +33,6 @@
 }
 
 #contactContent {
-    border-width: 1px;
-    border-style: solid;
     display: flex;
     float: left;
     height: max-content;

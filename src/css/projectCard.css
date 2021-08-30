@@ -9,12 +9,6 @@
     flex-grow: 1;
 }
 
-#projectDetailsWrapper {
-    display: flex;
-    flex-grow: 1;
-    margin: 10px;
-}
-
 #projectAnimation {
     width: 25%;
     float: left;
@@ -31,6 +25,7 @@
     display: flex;
     border-width: 1px;
     border-style: solid;
+    border-left-style: none;
     position: relative;
     height: 100%;
     width: 75%;
@@ -79,4 +74,14 @@
 
 #projectDescription {
     font-size: large;
+}
+
+#projectDetailsWrapper {
+    display: flex;
+    flex-grow: 1;
+    margin: 10px;
+    border-style: solid;
+    border-color: black;
+    border-left-style: none;
+    border-width: 1px;
 }
