@@ -15,6 +15,21 @@
 
 .cardInfo {
     height: fit-content;
+    text-align: center;
+    display: inline-table;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    font-size: x-large;
+    font-weight: bold;
+
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(200,200,200,0.2) 60%, rgba(255,255,255,0.0) 100%);
+
+    border-radius: 3px;
+
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -46,6 +61,3 @@
     }
 }
 
-.cardInfo {
-    text-align: center;
-}

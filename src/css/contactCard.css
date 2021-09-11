@@ -32,6 +32,12 @@
     font-size: large;
 }
 
+#contactHeader {
+    display: flex;
+    height: 60px;
+    justify-content: center;
+}
+
 #contactContent {
     display: flex;
     float: left;
@@ -51,4 +57,5 @@
     float: left;
     height: 100%;
     position: relative;
+    background-color: white;
 }

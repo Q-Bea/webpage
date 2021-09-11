@@ -9,29 +9,35 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
 
     <script src="js/projectCycle.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div id="header">
+    <div id="header" class="title-gradient">
         <span id="name">{{site.data.author.name}}</span> <span class="pronouns">{{site.data.author.pronouns}}</span>
         <p id="word-descript">Fill. in. the. blank.</p>
     </div>
     <div class="pageSpacer"></div>
     <div id="pageMid">
         <div id="contactDescriptCard">
-            <h2 class="cardInfo">Who am I</h2>
+            <div id="contactHeader" class="section-gradient">
+                <p class="cardInfo">Who am I</p>
+            </div>
             <div id="contactContent">
                 {% include contact.html %}
             </div>
         </div>
         <div id="midSpacer"></div>
         <div id="projectsCard">
-            <div id="projectPicksHeader">
+            <div id="projectPicksHeader" class="section-gradient">
                 <button id="prevProject">
                     <div class="tooltip"><span>Previous</span>
                         <span class="tooltiptext">Please enable Javascript</span>
                     </div>
                 </button>
-                <h2 class="cardInfo">Project Picks</h2>
+                <div id="projectsCardLabel">
+                    <p class="cardInfo">Project Picks</p>
+                </div>
                 <button id="nextProject">
                     <div class="tooltip"><span>Next</span>
                         <span class="tooltiptext">Please enable Javascript</span>

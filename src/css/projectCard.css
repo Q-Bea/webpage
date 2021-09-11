@@ -7,6 +7,7 @@
     height: 100%;
     flex-flow: column;
     flex-grow: 1;
+    background-color: white;
 }
 
 #projectAnimation {
@@ -14,7 +15,7 @@
     float: left;
     display: flex;
     border-width: 1px;
-    border-style: solid;
+    border-right-style: solid;
     height: 100%;
     max-width: fit-content;
     margin-right: 10px;
@@ -23,9 +24,6 @@
 #projectText {
     float: none;
     display: flex;
-    border-width: 1px;
-    border-style: solid;
-    border-left-style: none;
     position: relative;
     height: 100%;
     width: 75%;
@@ -48,21 +46,27 @@
     border-radius: 0;
     transition: 0.3s;
     font-size: larger;
+    background-color: rgba(255,255,255,0.5);
+    border-width: 1.5px;
+    border-color: black;
 }
 
 #prevProject:hover,
 #nextProject:hover {
-    background-color: rgb(192, 192, 192);
+    background-color: rgba(128, 128, 128, 0.4);
 }
 
 #projectPicksHeader {
     display: flex;
     flex-flow: row;
     justify-content: center;
+    height: 60px;
 }
 
-#projectPicksHeader .cardInfo {
+#projectsCardLabel {
+    display: flex;
     width: 60%;
+    justify-content: center;
 }
 
 #projectTitle {
@@ -82,6 +86,5 @@
     margin: 10px;
     border-style: solid;
     border-color: black;
-    border-left-style: none;
     border-width: 1px;
 }

@@ -17,8 +17,10 @@
     display: inline-flex;
     font-size: x-small;
     color: rgba(0,0,0,0.68);
-    background-color: rgb(233, 233, 233);
+    /* background-color: rgba(255, 255, 255, 0.1); */
     vertical-align: text-bottom;
+    border-radius: 3px;
+    color: rgb(39, 39, 39, 0.7)
 }
 
 #word-descript {
