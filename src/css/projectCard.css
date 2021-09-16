@@ -1,21 +1,16 @@
 #projectsCard {
     display: flex;
-    border-width: 1px;
-    border-style: solid;
     float: none;
     overflow: hidden;
     height: 100%;
     flex-flow: column;
     flex-grow: 1;
-    background-color: white;
 }
 
 #projectAnimation {
     width: 25%;
     float: left;
     display: flex;
-    border-width: 1px;
-    border-right-style: solid;
     height: 100%;
     max-width: fit-content;
     margin-right: 10px;
@@ -56,13 +51,6 @@
     background-color: rgba(128, 128, 128, 0.4);
 }
 
-#projectPicksHeader {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    height: 60px;
-}
-
 #projectsCardLabel {
     display: flex;
     width: 60%;
@@ -84,7 +72,4 @@
     display: flex;
     flex-grow: 1;
     margin: 10px;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
 }

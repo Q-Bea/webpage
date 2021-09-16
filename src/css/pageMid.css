@@ -1,5 +1,6 @@
 @import "contactCard.css";
 @import "projectCard.css";
+@import "descriptCard.css";
 
 #pageMid {
     display: flex;
@@ -9,8 +10,22 @@
 }
 
 #midSpacer {
-    min-width: 15%;
+    min-width: 5%;
     display: flex;
+}
+
+.card {
+    border-radius: 5px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 0 3px 3px rgba(180, 180, 180, 0.547);
+}
+
+.cardHeader {
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    flex-flow: row;
 }
 
 .cardInfo {
@@ -24,17 +39,25 @@
     font-weight: bold;
 
     background: rgb(0,0,0);
-    background: radial-gradient(circle, rgba(200,200,200,0.2) 60%, rgba(255,255,255,0.0) 100%);
-
-    border-radius: 3px;
+    background: radial-gradient(circle, rgba(200,200,200,0.13) 60%, rgba(255,255,255,0.0) 100%);
 
     padding-left: 15px;
     padding-right: 15px;
 }
 
+#midLeftColumn {
+    display: flex;
+    flex-flow: column;
+    min-width: 30%;
+    width: 30%;
+    float: left;
+    height: 100%;
+    position: relative;
+}
+
 @media only screen and (max-width: 1024px) {
     #projectsCard,
-    #contactDescriptCard {
+    #midLeftColumn {
         width: 100%;
         min-height: 300px;
     }
@@ -46,6 +69,14 @@
     }
 
     #midSpacer {
+        min-height: 50px;
+    }
+
+    #midLeftFiller {
+        display: none;
+    }
+
+    .flexFiller {
         min-height: 50px;
     }
 }

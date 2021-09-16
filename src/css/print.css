@@ -1,0 +1,15 @@
+@media print {
+    #nextProject,
+    #prevProject {
+        display: none;
+    }
+
+    #projectAnimation {
+        display: none;
+    }
+
+    #resumeWrapper {
+        display: none;
+    }
+}
+

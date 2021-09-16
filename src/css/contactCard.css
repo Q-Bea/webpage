@@ -1,61 +1,17 @@
-#resumeWrapper {
-    justify-content: center;
-}
-
-.resumeButton {
-    width: fit-content;
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
-    text-align: center;
-    height: 50px;
-    margin-right: 0px;
-    margin-left: 0px;
-    vertical-align: middle;
-    line-height: 50px;
-    text-decoration: none;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-#contact-wrapper {
-    bottom: 0;
-    position: relative;
-    width: 100%;
+#contactContent {
+    box-sizing: border-box;
     text-align: center;
 }
 
-#contact-wrapper a {
+#contactContent a {
     text-decoration: none;
     font-size: large;
 }
 
-#contactHeader {
+.cardContent {
     display: flex;
-    height: 60px;
-    justify-content: center;
-}
-
-#contactContent {
-    display: flex;
-    float: left;
     height: max-content;
     flex-grow: 1;
     margin: 10px;
     flex-flow: column;
-}
-
-#contactDescriptCard {
-    display: flex;
-    flex-flow: column;
-    border-width: 1px;
-    border-style: solid;
-    min-width: 30%;
-    width: 30%;
-    float: left;
-    height: 100%;
-    position: relative;
-    background-color: white;
 }

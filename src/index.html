@@ -15,21 +15,42 @@
 <body>
     <div id="header" class="title-gradient">
         <span id="name">{{site.data.author.name}}</span> <span class="pronouns">{{site.data.author.pronouns}}</span>
-        <p id="word-descript">Fill. in. the. blank.</p>
+        <p id="word-descript">Meticulous Developer and Everyday Nerd </p>
     </div>
     <div class="pageSpacer"></div>
     <div id="pageMid">
-        <div id="contactDescriptCard">
-            <div id="contactHeader" class="section-gradient">
-                <p class="cardInfo">Who am I</p>
-            </div>
-            <div id="contactContent">
-                {% include contact.html %}
-            </div>
-        </div>
         <div id="midSpacer"></div>
-        <div id="projectsCard">
-            <div id="projectPicksHeader" class="section-gradient">
+
+        <div id="midLeftColumn">
+            <div id="midLeftFiller" class="flexFiller"></div>
+
+            <div id="descriptCard" class="card">
+                <div id="descriptHeader" class="section-gradient cardHeader">
+                    <p class="cardInfo">Who am I</p>
+                </div>
+                <div id="descriptContent" class="cardContent">
+                    {% include whoAmI.html %}
+                </div>
+            </div>
+
+            <div class="flexFiller"></div>
+
+            <div id="contactCard" class="card">
+                <div id="contactHeader" class="section-gradient cardHeader">
+                    <p class="cardInfo">Get in Touch</p>
+                </div>
+
+                <div id="contactContent" class="cardContent">
+                    {% include contact.html %}
+                </div>
+            </div>
+
+            <div class="flexFiller"></div>
+        </div>
+
+        <div id="midSpacer"></div>
+        <div id="projectsCard" class="card">
+            <div id="projectPicksHeader" class="section-gradient cardHeader">
                 <button id="prevProject">
                     <div class="tooltip"><span>Previous</span>
                         <span class="tooltiptext">Please enable Javascript</span>
@@ -57,9 +78,10 @@
                         {% include projects/{{site.data.projects.entries.first.subfolder}}/description.html %}
                     </div>
                 </div>
-
             </div>
         </div>
+        
+        <div id="midSpacer"></div>
     </div>
     <div class="pageSpacer"></div>
     <div id="footer">

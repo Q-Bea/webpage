@@ -82,7 +82,7 @@ function fade(done, ...elements) {
             done()
         }
 
-        op -= op * 0.1;
+        op -= op * 0.12;
     }, 1);
 }
 
@@ -99,6 +99,6 @@ function unfade(done, ...elements) {
             clearInterval(timer);
         }
 
-        op += op * 0.1;
+        op += op * 0.12;
     }, 1);
 }

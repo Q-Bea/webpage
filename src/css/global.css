@@ -1,18 +1,26 @@
 html,
 body {
-    background: whitesmoke;
+    background: rgb(204, 204, 204);
     font-family: "Roboto", "sans-serif";
 }
 
 .title-gradient {
     background: rgb(254,194,96);
     background: radial-gradient(circle, rgba(254,194,96,1) 0%, rgba(143,97,95,1) 41%, rgba(59,24,95,1) 100%);
-    box-shadow: 0 0 5px 5px #2A0944;
 }
 
 .section-gradient {
     background: rgb(161,37,104);
     background: radial-gradient(circle, rgba(161,37,104,1) 0%, rgba(175,61,103,1) 12%, rgba(211,122,100,1) 36%, rgba(254,194,96,1) 100%);
+}
+
+.buttonBackground {
+    background: rgb(255, 211, 140);
+    transition: 0.1s;
+}
+
+.buttonBackground:hover {
+    background: rgb(212, 165, 83);
 }
 
 .nice-font {
