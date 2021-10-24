@@ -1,5 +1,7 @@
 ---
+# This is to active liquid
 ---
+
 <head>
     <title>{{site.data.author.name}}</title>
 
@@ -10,15 +12,20 @@
 
     <script src="js/projectCycle.js"></script>
 
+    <script src="./js/tsparticles.min.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-    <div id="header" class="title-gradient">
-        <span id="name">{{site.data.author.name}}</span> <span class="pronouns">{{site.data.author.pronouns}}</span>
-        <p id="word-descript">Meticulous Developer and Everyday Nerd </p>
-    </div>
+    <header class="title-gradient">
+        <span class="pronouns invisible">{{site.data.author.pronouns}}</span> <span id="name">{{site.data.author.name}}</span> <span class="pronouns">{{site.data.author.pronouns}}</span>
+        <p id="word-descript">Words should be here</p>
+    </header>
     <div class="pageSpacer"></div>
     <div id="pageMid">
+        <div id="tsparticles"></div>
+
         <div id="midSpacer"></div>
 
         <div id="midLeftColumn">
@@ -84,7 +91,36 @@
         <div id="midSpacer"></div>
     </div>
     <div class="pageSpacer"></div>
-    <div id="footer">
+    <footer>
         {% include footer.html %}
-    </div>
+    </footer>
 </body>
+
+<script>
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    let prevSize = window.screen.width;
+    const SWAP_SIZE = 1025
+    
+    const LIGHT_PATH = "./js/particles-light.json";
+    const DEFAULT_PATH = "./js/particles.json";
+
+    tsParticles.loadJSON('tsparticles', window.screen.width < SWAP_SIZE ? LIGHT_PATH : DEFAULT_PATH, function() {
+        console.log('callback - tsparticles.js config loaded');
+    });
+
+    document.getElementById("tsparticles").style.height = document.getElementById("pageMid").offsetHeight
+
+    window.addEventListener("resize", () => {
+        document.getElementById("tsparticles").style.height = document.getElementById("pageMid").offsetHeight
+
+        if ((prevSize < SWAP_SIZE && window.screen.width >= SWAP_SIZE) || (prevSize >= SWAP_SIZE && window.screen.width < SWAP_SIZE)) {
+            tsParticles.loadJSON('tsparticles', window.screen.width < SWAP_SIZE ? LIGHT_PATH : DEFAULT_PATH, function() {
+                console.log('callback - tsparticles config loaded');
+            });
+
+            console.log(`Swapping to ${window.screen.width < SWAP_SIZE ? "lightweight particles" : "heavyweight particles"}`)
+        }
+
+        prevSize = window.screen.width;
+    })
+</script>

@@ -1,7 +1,12 @@
 html,
 body {
-    background: rgb(204, 204, 204);
+    background: rgb(15, 0, 25);
     font-family: "Roboto", "sans-serif";
+    overflow-x: hidden;
+}
+
+.invisible {
+    visibility: hidden;
 }
 
 .title-gradient {

@@ -5,8 +5,21 @@
 #pageMid {
     display: flex;
     height: 700px;
-    flex-flow: row;
+}
 
+#midContent {
+    flex-flow: row;
+    display: flex;
+    width: 100%;
+}
+
+#tsparticles{
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
+    z-index: 50;
 }
 
 #midSpacer {
@@ -18,7 +31,8 @@
     border-radius: 5px;
     background-color: white;
     overflow: hidden;
-    box-shadow: 0 0 3px 3px rgba(180, 180, 180, 0.547);
+    box-shadow: 0 0 3px 3px rgba(111, 111, 111, 0.547);
+    z-index: 100;
 }
 
 .cardHeader {
