@@ -10,7 +10,7 @@ body {
 }
 
 .title-gradient {
-    background: radial-gradient(circle, #727d94 0%, #07001A 44%);
+    background: radial-gradient(circle, #727d94 0%, #090026 50%);
     transition: background 0.3s;
 }
 
