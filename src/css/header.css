@@ -2,11 +2,9 @@ header {
     width: auto;
     text-align: center;
     margin: auto;
-    border-width: 1px;
-    border-style: solid;
     padding: 5%;
     border-radius: 3px;
-    box-shadow: 0 0 5px 5px #2A0944;
+    box-shadow: 0 0 3px 3px #5159697e;
 }
 
 #name {
@@ -15,14 +13,19 @@ header {
     font-weight: bolder;
 }
 
+@media only screen and (max-width: 600px) {
+    #name {
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.274);
+    }
+}
+
 .pronouns {
     display: inline-flex;
     font-size: x-small;
-    color: rgba(0,0,0,0.68);
     /* background-color: rgba(255, 255, 255, 0.1); */
     vertical-align: text-bottom;
     border-radius: 3px;
-    color: rgb(39, 39, 39, 0.7)
+    color: rgba(39, 39, 39, 0.76)
 }
 
 #word-descript {
@@ -32,6 +35,5 @@ header {
 .pageSpacer {
     display: block;
     width: 100%;
-    min-height: 3%;
-    height: 3%;
+    height: 15px;
 }

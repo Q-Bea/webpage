@@ -1,11 +1,11 @@
 #contactContent {
     box-sizing: border-box;
-    text-align: center;
 }
 
 #contactContent a {
     text-decoration: none;
     font-size: large;
+    color: #070019
 }
 
 .cardContent {
@@ -14,4 +14,8 @@
     flex-grow: 1;
     margin: 10px;
     flex-flow: column;
+}
+
+.linkbox {
+    width: max-content;
 }

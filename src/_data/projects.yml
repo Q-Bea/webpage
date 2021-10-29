@@ -1,9 +1,16 @@
 entries:
 - subfolder: speed
   title: Speed Tracker
+  keywords: 'Software, UI, API, Python'
 
 - subfolder: light-node
   title: Light Node
+  keywords: Software, Hardware, Networking, Arduino, C++
 
-- subfolder: example3
-  title: Project Example 3
+- subfolder: jekyll-tester
+  title: Jekyll Tester
+  keywords: Github Actions, Networking, Webhooks, API, Typescript
+
+- subfolder: tech-wiki
+  title: Technical Theatre Wiki
+  keywords: Jekyll, Collaborative, Volunteer Effort

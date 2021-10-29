@@ -8,12 +8,13 @@
 }
 
 #projectAnimation {
-    width: 25%;
+    width: 19%;
     float: left;
     display: flex;
     height: 100%;
     max-width: fit-content;
     margin-right: 10px;
+    overflow-x: hidden;
 }
 
 #projectText {
@@ -41,20 +42,54 @@
     border-radius: 0;
     transition: 0.3s;
     font-size: larger;
-    background-color: rgba(255,255,255,0.5);
-    border-width: 1.5px;
-    border-color: black;
+    background-color: #00000044;
+    color: rgb(150, 150, 150);
+    border-width: 0px;
+    border-color: rgb(75, 75, 75);
+    width: 10%;
+}
+
+#prevProject {
+    border-right-width: 1px;
+    border-right-style: solid
+}
+
+#nextProject {
+    border-left-width: 1px;
+    border-left-style: solid
 }
 
 #prevProject:hover,
 #nextProject:hover {
-    background-color: rgba(128, 128, 128, 0.4);
+    background-color: rgba(36, 36, 36, 0.664);
+}
+
+#prevProject:active,
+#nextProject:active {
+    transition: 0.1s;
+    background-color: rgba(53, 53, 53, 0.664);
 }
 
 #projectsCardLabel {
     display: flex;
-    width: 60%;
+    width: 50%;
     justify-content: center;
+    flex-grow: 1;
+}
+
+@media only screen and (max-width: 600px) {
+    #projectsCardLabel {
+        flex-grow: 0;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #projectDescription .bottomInFlex {
+        position: unset;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
 }
 
 #projectTitle {
@@ -68,8 +103,30 @@
     font-size: large;
 }
 
+#projectDescription .generalButton {
+    margin: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 #projectDetailsWrapper {
     display: flex;
     flex-grow: 1;
     margin: 10px;
+}
+
+.projectFeatures {
+    text-align: center;
+    color: rgb(31, 31, 31);
+}
+
+.projectCharm {
+    position: absolute;
+    float: left;
+    top: 0%;
+    left: 0%;
+}
+
+.projectCharm object {
+    width: 100px;
 }

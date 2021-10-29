@@ -20,7 +20,7 @@
 <body>
     <header class="title-gradient">
         <span class="pronouns invisible">{{site.data.author.pronouns}}</span> <span id="name">{{site.data.author.name}}</span> <span class="pronouns">{{site.data.author.pronouns}}</span>
-        <p id="word-descript">Words should be here</p>
+        <!-- <p id="word-descript">In the future, there could be words here</p>  -->
     </header>
     <div class="pageSpacer"></div>
     <div id="pageMid">
@@ -73,16 +73,21 @@
                 </button>
             </div>
             <div id="projectDetailsWrapper">
-                <div id="projectAnimation">
+                <div id="projectAnimation" class="hidden">
                     {% include projects/{{site.data.projects.entries.first.subfolder}}/animation.html %}
                 </div>
                 <div id="projectText">
-                    <div id="projectTitle">
-                        {{site.data.projects.entries.first.title }}
-                    </div>
-                    <hr>
-                    <div id="projectDescription">
-                        {% include projects/{{site.data.projects.entries.first.subfolder}}/description.html %}
+                    <div id="projectMeta">
+                        <div id="projectTitle">
+                            {{site.data.projects.entries.first.title }}
+                        </div>
+                        <div id="projectKeywords">
+                            {% include projectFeatures.html content=site.data.projects.entries.first.keywords %}
+                        </div>
+                        <br>
+                        <div id="projectDescription">
+                            {% include projects/{{site.data.projects.entries.first.subfolder}}/description.html %}
+                        </div>
                     </div>
                 </div>
             </div>

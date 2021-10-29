@@ -1,6 +1,6 @@
 html,
 body {
-    background: rgb(15, 0, 25);
+    background: rgb(6, 0, 20);
     font-family: "Roboto", "sans-serif";
     overflow-x: hidden;
 }
@@ -10,22 +10,65 @@ body {
 }
 
 .title-gradient {
-    background: rgb(254,194,96);
-    background: radial-gradient(circle, rgba(254,194,96,1) 0%, rgba(143,97,95,1) 41%, rgba(59,24,95,1) 100%);
+    background: radial-gradient(circle, #727d94 0%, #07001A 44%);
+    transition: background 0.3s;
 }
 
 .section-gradient {
-    background: rgb(161,37,104);
-    background: radial-gradient(circle, rgba(161,37,104,1) 0%, rgba(175,61,103,1) 12%, rgba(211,122,100,1) 36%, rgba(254,194,96,1) 100%);
+    background: radial-gradient(circle, #26408b 5%, #0d0221 60%);
+    transition: background 0.3s;
+}
+
+@media only screen and (max-width: 1024px) {
+    .title-gradient {
+        background: radial-gradient(circle, #727d94 0%, #07001A 80%);
+    }
+    
+    .section-gradient {
+        background: radial-gradient(circle, #26408b 5%, #0d0221 80%);
+    }
 }
 
 .buttonBackground {
-    background: rgb(255, 211, 140);
+    background: #183372;
+    color: #A9B7D3;
     transition: 0.1s;
 }
 
 .buttonBackground:hover {
-    background: rgb(212, 165, 83);
+    background: #22397D;
+}
+
+.buttonBackground:active {
+    transition: 0.1s;
+    background: #2C4AA3;
+}
+
+.generalButton {
+    background: #11234d;
+    width: fit-content;
+    height: 50px;
+    
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 3px;
+    
+    text-align: center;
+    vertical-align: middle;
+    
+    font-size: 17;
+    text-decoration: none;
+
+    line-height: 50px;
+    
+    margin-right: 0px;
+    margin-left: 0px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 .nice-font {
@@ -44,7 +87,7 @@ body {
 .tooltip .tooltiptext {
     visibility: hidden;
     min-width: 120px;
-    max-width: max-content;
+    max-width: 120px;
     width: max-content;
 
     background-color: rgba(0, 0, 0, 0.914);
@@ -61,6 +104,13 @@ body {
     margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
+}
+
+.tooltip .long {
+    min-width: 160px;
+    max-width: 160px;
+    width: max-content;
+    margin-left: -80px;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
@@ -93,4 +143,21 @@ body {
 
 .hidden {
     display: none !important;
+}
+
+.centerInFlex {
+    display: flex;
+    justify-content: center;
+}
+
+.bottomInFlex {
+    bottom: 0%;
+    position: absolute;
+}
+
+hr {
+    color: rgba(0, 0, 0, 0.13);
+    border-color: inherit;
+    background-color: inherit;
+    border-style: solid;
 }

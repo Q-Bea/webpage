@@ -4,9 +4,10 @@
 const projectRendered = []
 {% for project in site.data.projects.entries %}
     projectRendered.push({
-        title: `{{project.title }}`,
+        title: `{{project.title }}`, //Have to use backticks because when the template replacement happens, any included quotes will break stuff
         animation: `{% include projects/{{project.subfolder}}/animation.html %}`,
-        description: `{% include projects/{{project.subfolder}}/description.html %}`
+        description: `{% include projects/{{project.subfolder}}/description.html %}`,
+        keywords: `{% include projectFeatures.html content=project.keywords %}`
     })
 {% endfor %}
 
@@ -18,6 +19,10 @@ window.addEventListener("load", function () {
 
     document.getElementById("nextProject").onclick = onNext
     document.getElementById("nextProject").innerHTML = "Next"
+
+    if (projectRendered[0].animation !== "") {
+        document.getElementById("projectAnimation").classList.remove("hidden")
+    }
 })
 
 var setInnerHTML = function(elm, html) {
@@ -55,6 +60,9 @@ function sharedCycle() {
     fade(function () {
         document.getElementById("projectDescription").innerHTML = projectRendered[currentProject].description;
         document.getElementById("projectTitle").innerHTML = projectRendered[currentProject].title;
+
+        document.getElementById("projectTitle").innerHTML = projectRendered[currentProject].title;
+        document.getElementById("projectKeywords").innerHTML = projectRendered[currentProject].keywords;
     
         setInnerHTML(document.getElementById("projectAnimation"), projectRendered[currentProject].animation)
     
@@ -64,8 +72,8 @@ function sharedCycle() {
             document.getElementById("projectAnimation").classList.remove("hidden")
         }
     
-        unfade(null, document.getElementById("projectDescription"), document.getElementById("projectTitle"), document.getElementById("projectAnimation"))
-    }, document.getElementById("projectDescription"), document.getElementById("projectTitle"), document.getElementById("projectAnimation"))
+        unfade(null, document.getElementById("projectMeta"), document.getElementById("projectAnimation"))
+    }, document.getElementById("projectMeta"), document.getElementById("projectAnimation"))
 }
 
 function fade(done, ...elements) {

@@ -1,0 +1,20 @@
+
+
+<p class="projectFeatures">
+
+{% assign words = {{include.content | replace: "  ", " " | split: ', '}} %}
+
+
+{% assign output = "" %}
+
+{% for word in words %}
+{% assign output = {{output | append: word}} %}
+
+{% unless forloop.last %}
+{% assign output = {{output | append: " • "}} %}
+{% endunless %}
+
+{% endfor %}
+
+{{output}}
+</p>
