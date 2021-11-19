@@ -1,11 +1,11 @@
 entries:
-- subfolder: speed
-  title: Speed Tracker
-  keywords: 'Software, UI, API, Python'
-
 - subfolder: light-node
   title: Light Node
   keywords: Software, Hardware, Networking, Arduino, C++
+
+- subfolder: speed
+  title: Speed Tracker
+  keywords: 'Software, UI, API, Python'
 
 - subfolder: jekyll-tester
   title: Jekyll Tester
@@ -13,4 +13,4 @@ entries:
 
 - subfolder: tech-wiki
   title: Technical Theatre Wiki
-  keywords: Jekyll, Collaborative, Volunteer Effort
+  keywords: Collaborative, Volunteer Effort, Jekyll

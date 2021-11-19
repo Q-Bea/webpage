@@ -12,7 +12,7 @@
                 "isDefault": true
             },
             "options": {
-                "cwd": "${workspaceFolder}/src"
+                "cwd": "${workspaceFolder}/docs"
             }
         },
         {
@@ -20,7 +20,7 @@
             "type": "shell",
             "command": "bundle update",
             "options": {
-                "cwd": "${workspaceFolder}/src"
+                "cwd": "${workspaceFolder}/docs"
             }
         },
         {
