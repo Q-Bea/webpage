@@ -1,1 +1,1 @@
-Source files for my personal website hosted at [b-macdonald.ca](https://b-macdonald.ca).
+Source files for my personal website hosted at [beamacdonald.ca](https://beamacdonald.ca).
