@@ -1,16 +1,16 @@
 entries:
-- subfolder: light-node
-  title: Light Node
-  keywords: Software, Hardware, Networking, Arduino, C++
-
 - subfolder: fringe-controller
   title: Fringe Controller
-  keywords: Websockets, Visual Media, Webapp, Nuxt, Vue
+  keywords: Nuxt, Vue, Websockets, Visual Media, Webapp
 
-- subfolder: speed
-  title: Speed Tracker
-  keywords: 'Application, UI, API, Python'
+- subfolder: is-it-raining
+  title: Is It Raining
+  keywords: Typescript, Node.js, Express, Raspberry Pi, Speech Synthesis, APIs
+
+- subfolder: light-node
+  title: Light Node
+  keywords: C++, Arduino, Networking, Embedded Programming
 
 - subfolder: tech-wiki
   title: Technical Theatre Wiki
-  keywords: Collaborative, Volunteer Effort, Jekyll
+  keywords: Jekyll, Collaborative, Volunteer Effort
